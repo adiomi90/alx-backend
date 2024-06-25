@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
-""" get page that take two integer arguments page with 1 and page
-    size with default value 10
-"""
+""" Defines a class that paginates a database of popular baby names """
 import csv
 from typing import List, Tuple
 index_range = __import__('0-simple_helper_function').index_range
 
 
 class Server:
-
+    """Server class to paginate a database of popular baby names.
+    """
     DATA_FILE = "Popular_Baby_Names.csv"
 
     def __init__(self):
@@ -16,9 +15,6 @@ class Server:
 
     def dataset(self) -> List[List]:
         """Cached dataset
-
-        Returns:
-            List[List]: The cached dataset.
         """
         if self.__dataset is None:
             with open(self.DATA_FILE) as f:
@@ -29,15 +25,13 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
-        """Get a specific page of data from the dataset.
-
+        """
+        Takes 2 integer arguments and returns requested page from the dataset
         Args:
-            page (int, optional): The page number to retrieve. Defaults to 1.
-            page_size (int, optional): The number of items per page.
-            Defaults to 10.
-
-        Returns:
-            List[List]: The data for the specified page.
+            page (int): required page number. must be a positive integer
+            page_size (int): number of records per page. must be a +ve integer
+        Return:
+            list of lists containing required data from the dataset
         """
         assert type(page) is int and page > 0
         assert type(page_size) is int and page_size > 0
