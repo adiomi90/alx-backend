@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+""" index range that takes two argument page and page_size"""
 from typing import Tuple
 
 
