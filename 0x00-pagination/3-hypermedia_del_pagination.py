@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+""" this script makes two integer argument page and page_size"""
 import csv
 import math
 from typing import List, Dict

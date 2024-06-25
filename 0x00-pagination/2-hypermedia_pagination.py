@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-
+""" a get_hyper method that takes the same argument
+    as get_page and returns a dictionary
+"""
 import csv
 import math
 from typing import List
