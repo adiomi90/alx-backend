@@ -46,7 +46,8 @@ class FIFOCache(BaseCaching):
             key: The key of the item to be retrieved.
 
         Returns:
-            The item associated with the given key, or None if the key is not found.
+            The item associated with the given key,
+            or None if the key is not found.
         """
         if key is not None and key in self.cache_data.keys():
             return self.cache_data[key]

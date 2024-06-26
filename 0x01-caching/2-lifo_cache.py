@@ -8,7 +8,8 @@ class LIFOCache(BaseCaching):
     LIFOCache class that inherits from BaseCaching.
 
     Attributes:
-        order (list): A list to keep track of the order of keys in the cache.
+        order (list): A list to keep track of the
+        order of keys in the cache.
 
     Methods:
         put(key, item): Adds an item to the cache.
@@ -51,7 +52,8 @@ class LIFOCache(BaseCaching):
             key: The key of the item to retrieve.
 
         Returns:
-            The item associated with the given key, or None if the key is not found.
+            The item associated with the given key,
+            or None if the key is not found.
         """
         if key is not None and key in self.cache_data.keys():
             return self.cache_data[key]
